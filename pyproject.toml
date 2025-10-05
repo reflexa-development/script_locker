@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fivem-locker"
+version = "0.1.0"
+description = "FiveM resource script locker/obfuscator with encrypted bundles and secure loader"
+authors = [{name = "Cursor AI"}]
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["fivem", "obfuscator", "lua", "locker", "resource"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+fivem-locker = "fivem_locker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"fivem_locker" = ["loader_template.lua"]
